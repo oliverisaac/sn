@@ -6,7 +6,7 @@ main() {
   file_to_edit=`select_file $previous_file`
 
   if [ -n "$file_to_edit" ] ; then
-    "micro" "$file_to_edit"
+    "${EDITOR:-micro}" "$file_to_edit"
     main "$file_to_edit"
   fi
 }
